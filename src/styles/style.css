@@ -6,42 +6,43 @@
   margin: 0;
 }
 
-.mainImg {
+body {
   height: 100vh;
-  background-image: url("../images/fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg");
+  background-image: url("../images/mgg-vitchakorn-98Xi5vMGKck-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+}
+
+#content {
+  height: 100%;
 }
 
 .slogan {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 90%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.slogan > h1 {
-  font-family: "Permanent Marker", cursive;
-  font-size: 3rem;
-  text-align: center;
-  letter-spacing: 0.3rem;
+.slogan-text {
   color: white;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  width: 50%;
+  text-align: center;
 }
 
 .logo {
   font-family: "Permanent Marker", cursive;
   color: white;
   font-size: 2rem;
-  text-decoration: underline;
-  text-underline-offset: 0.8rem;
 }
 
 .menu {
-  position: absolute;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -49,6 +50,7 @@
   font-size: larger;
   width: 100%;
   height: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu a {

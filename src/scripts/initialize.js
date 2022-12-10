@@ -1,5 +1,5 @@
-import createHomepage from "./home";
-import '../styles/style.css';
+import createSlogan from "./home";
+
 
 const navigation = () => {
     const logo = document.createElement('div');
@@ -7,7 +7,6 @@ const navigation = () => {
     logo.innerHTML = `Chez Gustave`;
 
     const menu = document.createElement('div');
-    menu.classList.add('menu');
     const menuItem1 = document.createElement('a');
     const menuItem2 = document.createElement('a');
     const menuItem3 = document.createElement('a');
@@ -21,6 +20,8 @@ const navigation = () => {
     menuItem3.innerHTML = 'About';
     menuItem4.innerHTML = 'Contact';
 
+    menu.classList.add('menu');
+
     menu.appendChild(logo);
     menu.appendChild(menuItem1);
     menu.appendChild(menuItem2);
@@ -29,9 +30,18 @@ const navigation = () => {
     return menu;
 }
 
+const main = () => {
+    const homeSlogan = document.createElement('div');
+    homeSlogan.classList.add('slogan');
+    homeSlogan.appendChild(createSlogan());
+    return homeSlogan;
+}
+
 const initialize = () => {
-    const menu = navigation();
-    document.body.appendChild(createHomepage(menu));
+    const content = document.getElementById('content');
+    content.appendChild(navigation());
+    content.appendChild(main());
+
 }
 
 export default initialize;
