@@ -59,6 +59,10 @@
   font-family: "Parisienne", sans-serif;
 }
 
+.header-logo-container:hover {
+  background-color: rgba(193, 157, 96, 0.4);
+}
+
 .socials {
   width: 20%;
   display: flex;
@@ -86,7 +90,7 @@
   position: absolute;
   top: 50%;
   right: 50%;
-  color: white;
+  color: rgb(193, 157, 96);
   font-family: "Parisienne", sans-serif;
   font-size: 3rem;
   font-weight: bold;
@@ -122,6 +126,7 @@
   font-family: "Parisienne", sans-serif;
   font-size: 4rem;
   text-decoration: underline;
+  text-decoration-color: rgb(193, 157, 96);
   text-underline-offset: 0.3rem;
 }
 
