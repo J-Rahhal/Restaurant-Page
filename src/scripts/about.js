@@ -19,7 +19,7 @@ const aboutpage = () => {
     thirdSpan.textContent = '00:00';
     fourthSpan.textContent = 'Friday to Saturday';
     fifthSpan.textContent = '11:00';
-    sixthSpan.textContent = '09:00';
+    sixthSpan.textContent = '21:00';
 
     aboutContainer.classList.add('about-container');
     info.classList.add('info');

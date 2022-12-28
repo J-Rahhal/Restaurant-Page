@@ -36,7 +36,7 @@ const menupage = () => {
     sixthSpan.textContent = '06.';
 
     firstheader.textContent = 'Teriyaki Veggie Bowl';
-    secondheader.textContent = 'Stake frites';
+    secondheader.textContent = 'Steak frites';
     thirdheader.textContent = 'Truffle Chicken Boursin';
     fourthheader.textContent = 'Bucatini al Persto';
     fifthheader.textContent = 'Mushroom Swiss Burger';
