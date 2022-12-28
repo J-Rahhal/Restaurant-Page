@@ -2,39 +2,59 @@ import createSlogan from "./home";
 
 
 const navigation = () => {
-    const logo = document.createElement('div');
-    logo.classList.add('logo');
-    logo.innerHTML = `Chez Gustave`;
+    const headerContainer = document.createElement('div');
+    const headerLogoContainer = document.createElement('div');
+    const headerLogo = document.createElement('h1');
+    const headerNav = document.createElement('ul');
+    const socialContainer = document.createElement('div');
 
-    const menu = document.createElement('div');
-    const menuItem1 = document.createElement('a');
-    const menuItem2 = document.createElement('a');
-    const menuItem3 = document.createElement('a');
-    const menuItem4 = document.createElement('a');
-    menuItem1.href = '#';
-    menuItem2.href = '#';
-    menuItem3.href = '#';
+    const Home = document.createElement('li');
+    const Menu = document.createElement('li');
+    const About = document.createElement('li');
 
-    menuItem1.innerHTML = 'Home';
-    menuItem2.innerHTML = 'Menu';
-    menuItem3.innerHTML = 'About';
-    menuItem4.innerHTML = 'Contact';
+    const twitter = document.createElement('i');
+    const instagram = document.createElement('i');
+    const facebook = document.createElement('i');
 
-    menu.classList.add('menu');
+    twitter.setAttribute('class', 'fa-brands fa-twitter');
+    instagram.setAttribute('class', 'fa-brands fa-instagram');
+    facebook.setAttribute('class', 'fa-brands fa-facebook');
 
-    menu.appendChild(logo);
-    menu.appendChild(menuItem1);
-    menu.appendChild(menuItem2);
-    menu.appendChild(menuItem3);
-    menu.appendChild(menuItem4);
-    return menu;
+
+    headerContainer.classList.add('header-container');
+    headerLogoContainer.classList.add('header-logo-container');
+    headerLogo.classList.add('header-logo');
+    headerNav.classList.add('header-nav');
+    socialContainer.classList.add('socials');
+
+    Home.classList.add('link');
+    Menu.classList.add('link');
+    About.classList.add('link');
+
+    Home.textContent = 'Home';
+    Menu.textContent = 'Menu';
+    About.textContent = 'About';
+
+    headerLogo.textContent = 'Chez Gustave';
+    headerNav.appendChild(Home);
+    headerNav.appendChild(Menu);
+    headerNav.appendChild(About);
+
+    socialContainer.appendChild(twitter);
+    socialContainer.appendChild(instagram);
+    socialContainer.appendChild(facebook);
+
+    headerLogoContainer.appendChild(headerLogo);
+    headerContainer.appendChild(headerNav);
+    headerContainer.appendChild(headerLogoContainer);
+    headerContainer.appendChild(socialContainer);
+    return headerContainer;
 }
 
 const main = () => {
-    const homeSlogan = document.createElement('div');
-    homeSlogan.classList.add('slogan');
-    homeSlogan.appendChild(createSlogan());
-    return homeSlogan;
+    const main = document.createElement('div');
+    main.id = 'main';
+    return main;
 }
 
 const initialize = () => {
