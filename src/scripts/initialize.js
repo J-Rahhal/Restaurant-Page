@@ -1,6 +1,5 @@
 import displayHome from "./home";
-import homepage from "./home";
-
+import displayMenu from "./menu";
 
 const navigation = () => {
     const headerContainer = document.createElement('div');
@@ -49,6 +48,10 @@ const navigation = () => {
     headerContainer.appendChild(headerNav);
     headerContainer.appendChild(headerLogoContainer);
     headerContainer.appendChild(socialContainer);
+
+    displayPages(Home, displayHome);
+    displayPages(Menu, displayMenu);
+
     return headerContainer;
 }
 
@@ -56,6 +59,23 @@ const main = () => {
     const main = document.createElement('div');
     main.id = 'main';
     return main;
+}
+
+const displayPages = (navlink, page) => {
+    const links = Array.from(document.querySelectorAll('.link'));
+    navlink.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('active')) {
+            links.forEach(link => link.classList.remove('active'));
+            e.target.classList.add('active');
+            const main = document.getElementById('main');
+            if (main.hasChildNodes()) {
+                main.removeChild(main.firstChild);
+                page();
+            }
+
+        }
+        e.target.classList.remove('active');
+    });
 }
 
 const initialize = () => {
