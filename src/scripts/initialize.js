@@ -1,5 +1,6 @@
 import displayHome from "./home";
 import displayMenu from "./menu";
+import displayAbout from "./about";
 
 const navigation = () => {
     const headerContainer = document.createElement('div');
@@ -51,6 +52,7 @@ const navigation = () => {
 
     displayPages(Home, displayHome);
     displayPages(Menu, displayMenu);
+    displayPages(About, displayAbout);
 
     return headerContainer;
 }
