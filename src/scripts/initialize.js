@@ -1,4 +1,5 @@
-import createSlogan from "./home";
+import displayHome from "./home";
+import homepage from "./home";
 
 
 const navigation = () => {
@@ -61,6 +62,7 @@ const initialize = () => {
     const content = document.getElementById('content');
     content.appendChild(navigation());
     content.appendChild(main());
+    displayHome();
 
 }
 

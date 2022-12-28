@@ -9,7 +9,7 @@
   margin: 0;
 }
 
-home-container {
+.home-container {
   background-image: url("../images/thibault-penin-uqd-Eq1_TtE-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -66,4 +66,31 @@ home-container {
   cursor: pointer;
   font-size: 1.3rem;
   color: white;
+}
+
+.slogan-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 90vh;
+  top: 10vh;
+}
+
+.slogan {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  color: white;
+  font-family: "Parisienne", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.slogan-paragraph {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  color: white;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
 }
